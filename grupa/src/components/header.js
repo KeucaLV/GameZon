@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header() {
@@ -15,20 +16,20 @@ function Header() {
       <div className={`header ${isTitleVisible ? "" : "hidden"}`}>
         <div className="flex-row-space">
           <div className="headerBox">
-            <h1 className={`title ${isTitleVisible ? "" : "hidden"}`}>
+            <Link className={`title ${isTitleVisible ? "" : "hidden"}`} to="/">
               GameZon
-            </h1>
+            </Link>
           </div>
           <div className="navBox">
-            <a href="#" className="text">
+            <Link className="text" to="/Tournaments">
               Tournaments
-            </a>
-            <a href="#" className="text">
+            </Link>
+            <Link className="text" to="/Search">
               Search
-            </a>
-            <a href="#" className="profileBtn">
+            </Link>
+            <Link className="profileBtn" to="/Profile">
               Profile
-            </a>
+            </Link>
             <button
               className={`nav-Btn ${isBoxOpen ? "open" : ""} `}
               onClick={toggleBox}
