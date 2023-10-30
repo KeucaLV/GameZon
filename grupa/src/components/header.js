@@ -49,19 +49,16 @@ function Header() {
             </button>
           </div>
           <div className="mobileNav">
-            <a href="#" className="mobileText">
-              Home
-            </a>
-            <a href="#" className="mobileText">
+            <Link className="mobileText" to="/Tournaments">
               Tournaments
-            </a>
-            <a href="#" className="mobileText">
+            </Link>
+            <Link className="mobileText" to="/Search">
               Search
-            </a>
+            </Link>
             <div className="mobileText">
-              <a href="#" className="mobileProfileBtn">
+              <Link className="mobileProfileBtn" to="/Profile">
                 Profile
-              </a>
+              </Link>
             </div>
           </div>
         </div>

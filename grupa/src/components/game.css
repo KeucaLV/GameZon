@@ -1,5 +1,6 @@
 .recomend-title {
   padding: 20px;
+  align-self: flex-start;
 }
 
 .flex-row-space {
