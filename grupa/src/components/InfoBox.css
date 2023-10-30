@@ -4,14 +4,20 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .infoBox {
   display: flex;
-  position: absolute;
   flex-direction: column;
   top: 100px;
   left: 100;
   background-color: white;
-  width: 1192px;
+  flex: 50%;
+  max-width: 1192px;
   height: 617px;
   border-radius: 5px;
   font-family: "Inter", sans-serif;
@@ -152,4 +158,49 @@ h1 {
 
 .backBtnInfo:hover {
   background-color: #0056b3;
+}
+
+@media screen and (max-width: 320px) {
+  .infoBox {
+    width: 100%; /* Make it full width */
+    top: 0;
+    left: 0;
+    height: auto; /* Allow content to determine height */
+    max-height: none; /* Reset max-height */
+    margin: 0; /* Remove any margin */
+  }
+
+  .infoBoxHeader {
+    width: 100%; /* Make it full width */
+  }
+
+  .InfoImageBox {
+    width: 100%; /* Make it full width */
+  }
+
+  .infoColumnBox,
+  .smallBoxCenter,
+  .smallBoxEnd {
+    width: 100%; /* Make it full width */
+    margin: 0; /* Remove margin */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .longVerticalLine,
+  .longHorizontalLine {
+    display: none; /* Hide long lines */
+  }
+
+  .verticalLine {
+    height: 100%; /* Make it full height */
+  }
+
+  .descriptionBoxInfo {
+    height: auto; /* Allow content to determine height */
+  }
+
+  .backBtnInfo {
+    width: 100%; /* Make it full width */
+    margin: 5px 0; /* Adjust margin */
+  }
 }

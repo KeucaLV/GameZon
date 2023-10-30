@@ -15,7 +15,7 @@ function Profile() {
 
   return (
     <>
-      <div className="main">
+      <div className="mainProfile">
         <div className="flex-row">
           <div className="userBox">
             <h1 className="welcome">Welcome, *Username* !</h1>
