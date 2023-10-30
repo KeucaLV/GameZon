@@ -5,8 +5,7 @@ function App() {
   return (
     <>
         <Header />
-        <div className="image-box">
-        </div>
+        
     </>
   );
 }
