@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 100;
+    background-color: white;
+    flex: 50%;
+    max-width: 1192px;
+    height: 617px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+.infoBoxHeader {
+    display: flex;
+    width: 1192px;
+    height: 55px;
+    align-items: center;
+    background-color: #b06ec7;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    justify-content: flex-end;
+    font-family: "Inter", sans-serif;
+}
+
+.InfoImageBox {
+    display: flex;
+    width: 500px;
+    height: 280px;
+    margin-top: 30px;
+    margin: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.infoColumnBox {
+    display: flex;
+    flex: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+.infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+.smallBoxCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.smallBoxEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.verticalLine {
+    display: flex;
+    width: 2px;
+    height: 158px;
+    background-color: black;
+}
+
+.longVerticalLine {
+    display: flex;
+    width: 2px;
+    height: 460px;
+    margin-top: 35px;
+    background-color: black;
+}
+
+.longHorizontalLine {
+    display: flex;
+    width: 500px;
+    height: 2px;
+    margin-top: 35px;
+    background-color: black;
+}
+
+.grey {
+    font-size: 20px;
+    color: #847b7b;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.descriptionBoxInfo {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 35%;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.backBtnInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.backBtnInfo:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 320px) {
+    .infoBox {
+        width: 100%; /* Make it full width */
+        top: 0;
+        left: 0;
+        height: auto; /* Allow content to determine height */
+        max-height: none; /* Reset max-height */
+        margin: 0; /* Remove any margin */
+    }
+
+    .infoBoxHeader {
+        width: 100%; /* Make it full width */
+    }
+
+    .InfoImageBox {
+        width: 100%; /* Make it full width */
+    }
+
+    .infoColumnBox,
+    .smallBoxCenter,
+    .smallBoxEnd {
+        width: 100%; /* Make it full width */
+        margin: 0; /* Remove margin */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .longVerticalLine,
+    .longHorizontalLine {
+        display: none; /* Hide long lines */
+    }
+
+    .verticalLine {
+        height: 100%; /* Make it full height */
+    }
+
+    .descriptionBoxInfo {
+        height: auto; /* Allow content to determine height */
+    }
+
+    .backBtnInfo {
+        width: 100%; /* Make it full width */
+        margin: 5px 0; /* Adjust margin */
+    }
+}
