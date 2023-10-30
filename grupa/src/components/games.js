@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./game.css";
 import GameBox from "./gamebox.js";
-import InfoBox from "./InfoBox.js";
 
 function Data() {
   const [data, setData] = useState([]);
@@ -28,12 +27,6 @@ function Data() {
           {data.map((item) => (
             <>
               <GameBox
-                key={item.id}
-                name={item.name}
-                imageUrl={item.img}
-                description={item.description}
-              />
-              <InfoBox
                 key={item.id}
                 name={item.name}
                 imageUrl={item.img}
