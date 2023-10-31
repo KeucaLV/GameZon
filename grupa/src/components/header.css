@@ -186,6 +186,10 @@ a {
     display: flex;
   }
 
+  .header {
+    justify-content: flex-start;
+  }
+
   .flex-row-space{
     padding: 10px;
   }
