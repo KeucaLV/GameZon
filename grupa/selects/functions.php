@@ -9,6 +9,7 @@ class TaskHandler extends Database{
     function getAllTasks() {
         $db = new Database;
         $sql = "SELECT * FROM gamer";
+        $sql = "SELECT * FROM `add_tournament`";
         $result = $this->conn->query($sql);
         $tasks = array();
 

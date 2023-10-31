@@ -13,7 +13,7 @@ class TaskAPI {
         $this->conn = $db;
     }
 
-    function getTaskById($id) {
+    function getGameById($id) {
         $query = "SELECT * FROM gamer WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
@@ -21,7 +21,7 @@ class TaskAPI {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    function getAllTasks() {
+    function getAllGames() {
         $query = "SELECT * FROM gamer";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
@@ -33,10 +33,10 @@ $api = new TaskAPI($db);
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['id'])) {
-        $task = $api->getTaskById($_GET['id']);
+        $task = $api->getGameById($_GET['id']);
         echo json_encode($task);
     } else {
-        $tasks = $api->getAllTasks();
+        $tasks = $api->getAllGames();
         echo json_encode($tasks);
     }
 }
