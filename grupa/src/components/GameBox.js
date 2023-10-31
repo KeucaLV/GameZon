@@ -27,7 +27,7 @@ function GameBox() {
                 </div>
             ))}
         </div>
-        <div>
+        <div className="buttonBox">
             <button className="addTournament">Add Tournament</button>
         </div>
         </div>

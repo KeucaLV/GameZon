@@ -9,6 +9,7 @@
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    flex-direction:row;
 }
 .addTournament{
     width:250px;
@@ -20,6 +21,23 @@
     background-color: #56BDE9;
     color:white;
     border:none;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 4px;
+
+}
+.addTournament:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 10px;
+    transition: 3ms;
+    cursor: pointer;
+}
+.buttonBox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:15%;
+    margin-bottom:25px;
 }
 .flex-row-space {
     display: flex;
