@@ -48,8 +48,8 @@ function SearchBar({ onSearch }) {
 
     return (
         <>
-
-            <form onSubmit={handleSubmit}>
+        <div className="searchMain">
+            <form className="form" onSubmit={handleSubmit}>
 
                 <h1 className="searchTitle">Search For A Game!</h1>
                 <div className="search-container">
@@ -67,7 +67,7 @@ function SearchBar({ onSearch }) {
             </form>
             {showNothingFound && <h1 className="nothingFound">Nothing found!!!</h1>}
             <SearchResults results={results} />
-
+        </div>
         </>
     );
 }

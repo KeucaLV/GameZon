@@ -4,10 +4,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.main {
+.searchMain {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .nothingFound{
@@ -38,7 +39,7 @@ body {
   background-color: #b06ec7;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  justify-content: flex-end;
+  justify-content: center;
   font-family: "Inter", sans-serif;
 }
 
@@ -46,7 +47,6 @@ body {
   display: flex;
   width: 500px;
   margin: 20px;
-  height: 280px;
   font-family: "Inter", sans-serif;
 }
 
@@ -73,16 +73,55 @@ body {
   font-family: "Inter", sans-serif;
   flex-wrap: wrap;
 }
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 100%;
+}
+
+
+.infoRowHide{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.mobileRow{
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
+}
+
 .smallBoxCenter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 150px;
   height: 150px;
   margin: 10px;
   padding: 30px;
   font-family: "Inter", sans-serif;
+}
+
+.headerLine{
+  display: none;
+  width: 200px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50px;
 }
 
 .smallBoxEnd {
@@ -117,6 +156,14 @@ body {
   width: 500px;
   height: 2px;
   margin-top: 35px;
+  background-color: black;
+}
+
+.mobileHorizontalLine{
+  display: none;
+  width: 60%;
+  height: 2px;
+  margin: none;
   background-color: black;
 }
 
@@ -175,10 +222,13 @@ h1 {
 .search-container {
   display: flex;
   align-items: center;
-  margin: 15px;
+  align-self: center;
+  padding: 10px;
+  width: 100%;
 }
 
 .search-input {
+
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -204,14 +254,56 @@ h1 {
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .inBox {
-    width: 300px; /* Make it full width */
+    width: 300px;
     top: 0;
     left: 0;
-    height: auto; /* Allow content to determine height */
-    max-height: none; /* Reset max-height */
-    margin: 0; /* Remove any margin */
+    height: auto;
+    max-height: none;
+    margin: 10px;
+  }
+
+  .search-container{
+    width: auto;
+  }
+
+  .mobileRow{
+    display: flex;
+  }
+
+
+  .infoRowHide{
+    display: none;
+  }
+
+  .longVerticalLine{
+    display: none;
+  }
+
+  .mobileHorizontalLine{
+    display: flex;
+
+  }
+
+  .headerLine{
+    display: flex;
+  }
+
+  .price{
+    font-size: 20px;
+  }
+
+  .name{
+    font-size: 20px;
+  }
+
+  .age{
+    font-size: 20px;
+  }
+
+  .release{
+    font-size: 20px;
   }
 
   .infoBoxHeader {
@@ -229,18 +321,20 @@ h1 {
   .infoColumnBox,
   .smallBoxCenter,
   .smallBoxEnd {
-    width: 100%; /* Make it full width */
+    flex: 40%; /* Make it full width */
     margin: 0; /* Remove margin */
     padding: 10px; /* Adjust padding */
   }
 
-  .longVerticalLine,
+  /*.longVerticalLine,*/
   .longHorizontalLine {
-    display: none; /* Hide long lines */
+    width: 120%;
+    height: 2.5px;
   }
 
   .verticalLine {
-    height: 100%; /* Make it full height */
+    height: 100px;
+    margin: 2px;
   }
 
   .descriptionBoxInfo {
