@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import SearchResults from "./searchResult";
-
+import "./InfoBox.css";
 
 function SearchBar({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState([]);
+    const [showNothingFound, setShowNothingFound] = useState(false);
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
@@ -28,6 +29,13 @@ function SearchBar({ onSearch }) {
 
             const data = await response.json();
             console.log('Received data from PHP:', data); // Check if data is received
+
+            if (data.length === 0) {
+                setShowNothingFound(true);
+            } else {
+                setShowNothingFound(false);
+            }
+
             setResults(data);
 
         } catch (error) {
@@ -41,14 +49,18 @@ function SearchBar({ onSearch }) {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={searchTerm}
-                    onChange={handleChange}
-                    placeholder="Search for games..."
-                />
-                <button type="submit">Search</button>
+                <div className="search-container">
+                    <input
+                        className="search-input"
+                        type="text"
+                        value={searchTerm}
+                        onChange={handleChange}
+                        placeholder="Search for games..."
+                    />
+                    <button className="search-button" type="submit">Search</button>
+                </div>
             </form>
+            {showNothingFound && <h1 className="nothingFound">Nothing found!!!</h1>}
             <SearchResults results={results} />
         </>
     );

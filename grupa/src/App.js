@@ -3,7 +3,7 @@ import Profile from "./components/profile.js";
 import "./App.css";
 import Games from "./components/games.js";
 import Header from "./components/header.js";
-import Search from "./components/search.js";
+// import Search from "./components/search.js";
 import Login from "./components/Login.js";
 import SearchTest from "./components/searchTest";
 
