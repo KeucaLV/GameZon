@@ -6,7 +6,7 @@ function Data() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost/datubazes/selects/index.php")
+    fetch("http://localhost/datubazes/selects/recomended.php")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error:", error));

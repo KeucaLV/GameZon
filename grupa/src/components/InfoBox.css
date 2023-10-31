@@ -26,6 +26,7 @@ body {
   max-width: 1100px;
   height: 617px;
   border-radius: 5px;
+  margin: 10px;
   font-family: "Inter", sans-serif;
 }
 
@@ -59,12 +60,18 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.searchTitle{
+  margin: 15px;
+  font-size: 27px;
+}
+
 .infoRow {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
 }
 .smallBoxCenter {
   display: flex;
@@ -198,8 +205,8 @@ h1 {
 
 
 @media screen and (max-width: 320px) {
-  .infoBox {
-    width: 100%; /* Make it full width */
+  .inBox {
+    width: 300px; /* Make it full width */
     top: 0;
     left: 0;
     height: auto; /* Allow content to determine height */
@@ -212,7 +219,11 @@ h1 {
   }
 
   .InfoImageBox {
-    width: 100%; /* Make it full width */
+    width: 80%; /* Make it full width */
+  }
+
+  .infoImageBox img{
+    height: 100px;
   }
 
   .infoColumnBox,
