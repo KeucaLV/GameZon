@@ -8,7 +8,7 @@ function FetchAPI() {
     }, []);
 
     const fetchData = () => {
-        fetch('http://localhost:8888/GameZon1/GameZon/grupa/selects/functions.php')
+        fetch('http://localhost:8888/GitHub/GameZon/grupa/selects/index.php')
             .then(response => response.json())
             .then(data => {
                 console.log(data);

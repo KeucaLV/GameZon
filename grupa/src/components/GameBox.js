@@ -1,46 +1,36 @@
 import React, { useState, useEffect } from "react";
 import "./game.css";
-import "./InfoBox.css";
+import {findAllByDisplayValue} from "@testing-library/react";
 
-function GameBox({ name, description, imageUrl }) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isInVisible, setIsInVisible] = useState(true);
-
+function GameBox() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost/datubazes/selects/index.php")
+        fetch("http://localhost:8888/GitHub/GameZon/grupa/selects/index.php")
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => console.error("Error:", error));
     }, []);
 
-    const toggleDescription = () => {
-        setIsOpen(!isOpen);
-        setIsInVisible(!setIsInVisible);
-    };
-
     return (
-        <>
-            <div
-                className={`box ${isOpen ? "open" : ""}`}
-                onClick={toggleDescription}
-            >
-                <div className="boxHeader">
-                    <div className="line"></div>
-                </div>
-                <div className="imageBox">
-                    <img className="gameImage" src={imageUrl} alt={name} />
-                </div>
-                <h1 className="gameName">{name}</h1>
-
-                {isOpen && (
-                    <div className="description">
-                        <h3>{description}</h3>
+        <div>
+        <div className="container">
+            {data.map((item) => (
+                <div key={item.id} className="box">
+                    <div className="boxHeader">
+                        <div className="line"></div>
                     </div>
-                )}
-            </div>
-        </>
+                    <div className="imageBox">
+                        <img className="gameImage" src={item.img} alt={item.name} />
+                    </div>
+                    <h1 className="gameName">{item.name}</h1>
+                </div>
+            ))}
+        </div>
+        <div>
+            <button className="addTournament">Add Tournament</button>
+        </div>
+        </div>
     );
 }
 
