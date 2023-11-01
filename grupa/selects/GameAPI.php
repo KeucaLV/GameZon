@@ -14,7 +14,7 @@ class TaskAPI {
     }
 
     function getTaskById($id) {
-        $query = "SELECT * FROM gamer WHERE id = :id";
+        $query = "SELECT * FROM games WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
@@ -22,7 +22,7 @@ class TaskAPI {
     }
 
     function getAllTasks() {
-        $query = "SELECT * FROM gamer";
+        $query = "SELECT * FROM games";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
