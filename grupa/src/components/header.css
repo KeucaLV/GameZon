@@ -14,10 +14,12 @@
   height: 72px;
   background-color: #b06ec7;
   align-items: center;
+  justify-content: center;
 }
 
 .flex-row-space {
   width: 100%;
+  max-width: 1100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,6 +66,23 @@ a {
   color: white;
   font-size: 27px;
   margin: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s; /* Adding transition for color change */
+}
+
+.text:hover {
+  text-decoration: underline; /* Change this to the color you want on hover */
+}
+
+a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.title {
+  color: white;
+  font-size: 27px;
 }
 
 .profileBtn {
@@ -184,6 +203,15 @@ a {
   .nav-Btn {
     display: flex;
   }
+
+  .header {
+    justify-content: flex-start;
+  }
+
+  .flex-row-space{
+    padding: 10px;
+  }
+
   .text {
     display: none;
   }

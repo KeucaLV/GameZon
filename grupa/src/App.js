@@ -7,6 +7,7 @@ import Search from "./components/search.js";
 import Login from "./components/Login.js";
 import Register from "./components/Register.jsx";
 import AddTournament from "./components/AddTournament";
+import SearchTest from "./components/searchTest";
 
 function App() {
   return (
