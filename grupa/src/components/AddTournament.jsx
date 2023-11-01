@@ -3,12 +3,14 @@ import './AddTournament.css';
 import { useNavigate } from 'react-router-dom';
 
 function AddTournament() {
+    const [game, setGame] = useState('');
     const [description, setDescription] = useState('');
     const [player_count, setPlayer_count] = useState('');
     const [prize_pool, setPrize_pool] = useState('');
     const [entry_fee, setEntry_fee] = useState('');
     const [from_date, setFrom_date] = useState('');
     const [to_date, setTo_date] = useState('');
+    const [bg_image, setBg_image] = useState('');
     const navigate = useNavigate();
 
     const [error, setError] = useState({
@@ -23,12 +25,14 @@ function AddTournament() {
     const sendDataToPHP = async () => {
         try {
             let data = {
+                game,
                 description,
                 player_count,
                 prize_pool,
                 entry_fee,
                 from_date,
                 to_date,
+                bg_image
             };
 
             let response = await fetch(
@@ -49,7 +53,7 @@ function AddTournament() {
             }
 
             if (response.status === 200) {
-                navigate('/Tournaments');
+                navigate('/');
             }
         } catch (error) {
             console.error('An error occurred:', error);
@@ -62,11 +66,15 @@ function AddTournament() {
             <div className="tournament-box">
                 <div className="input-fields">
                     <p>Game:</p>
-                    <select className="inputs" defaultValue="Fortnite">
-                        <option>Fortnite</option>
-                        <option>Fall Guys</option>
-                        <option>GTA V</option>
-                        <option>Minecraft</option>
+                    <select
+                        className="inputs"
+                        Value= {game}
+                        onChange={(e) => setGame(e.target.value)}
+                    >
+                        <option value = "Fortnite">Fortnite</option>
+                        <option value = "Fall Guys">Fall Guys</option>
+                        <option value = "GTA V">GTA V</option>
+                        <option value = "Minecraft">Minecraft</option>
                     </select>
                     <p>Description:</p>
                     <textarea
@@ -125,7 +133,13 @@ function AddTournament() {
                         </div>
                     </div>
                     <p>Background Image (Optional)</p>
-                    <input type="url" className="inputs" placeholder="Image URL" />
+                    <input
+                        type="url"
+                        className="inputs"
+                        placeholder="Image URL"
+                        value = {bg_image}
+                        onChange={(e) => setBg_image(e.target.value)}
+                    />
                     <button type="submit" onClick={sendDataToPHP}>
                         Add
                     </button>
