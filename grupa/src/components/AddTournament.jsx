@@ -36,7 +36,7 @@ function AddTournament() {
             };
 
             let response = await fetch(
-                'http://localhost/GameZon/GameZon/grupa/selects/tournamentHandler.php',
+                'http://localhost/datubazes/selects/tournamentHandler.php',
                 {
                     method: 'POST',
                     headers: {
@@ -62,13 +62,13 @@ function AddTournament() {
 
     return (
         <div className="main font32">
-            <label htmlFor="box">Add Tournament</label>
+            <p>Add Tournament</p>
             <div className="tournament-box">
                 <div className="input-fields">
                     <p>Game:</p>
                     <select
                         className="inputs"
-                        Value= {game}
+                        value= {game}
                         onChange={(e) => setGame(e.target.value)}
                     >
                         <option value = "Fortnite">Fortnite</option>
@@ -140,7 +140,7 @@ function AddTournament() {
                         value = {bg_image}
                         onChange={(e) => setBg_image(e.target.value)}
                     />
-                    <button type="submit" onClick={sendDataToPHP}>
+                    <button type="submit" className = "add-t-button" onClick={sendDataToPHP}>
                         Add
                     </button>
                 </div>

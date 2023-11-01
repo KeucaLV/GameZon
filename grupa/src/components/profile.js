@@ -25,7 +25,9 @@ function Profile() {
             <div className="forgotBox">
               <div className="flex-row">
                 <p className="userText">Want to use another account? </p>{" "}
-                <a href="#">Switch Accounts</a>
+                <Link to = "/Login">
+                  Switch Accounts
+                </Link>
               </div>
               <div className="flex-row">
                 <p className="userText">Want to see your Gaming Profile? </p>{" "}
@@ -35,7 +37,9 @@ function Profile() {
               </div>
               <div className="flex-row">
                 <p className="userText">Forgot your password?</p>{" "}
-                <a href="#">Reset Password</a>
+                <Link to = "/ForgotPassword">
+                  Reset Password
+                </Link>
               </div>
             </div>
           </div>

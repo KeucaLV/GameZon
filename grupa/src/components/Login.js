@@ -35,7 +35,9 @@ function Login() {
           <div className="forgot-page">
             <div className="forgot-text">Forgot password?</div>
             <div className="click-here-text">
-              <a href="#">Click here!</a>
+              <Link to = "/ForgotPassword">
+                Click here!
+              </Link>
             </div>
           </div>
         </div>

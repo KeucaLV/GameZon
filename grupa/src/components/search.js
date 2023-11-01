@@ -16,12 +16,6 @@ function Search({ name, description, imageUrl }) {
         <input type="text"></input>
         <div className="infoBox">
           <div className="infoBoxHeader">
-            <button
-              className={`backBtnInfo ${isOpen ? "" : "open"}`}
-              onClick={toggleDescription}
-            >
-              Back
-            </button>
           </div>
           <div className="infoRow">
             <div className="infoColumnBox">
