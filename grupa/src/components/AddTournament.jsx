@@ -36,7 +36,7 @@ function AddTournament() {
             };
 
             let response = await fetch(
-                'http://localhost/gamezon/GameZon/grupa/selects/tournamentHandler.php',
+                'http://localhost/GameZon/GameZon/grupa/selects/tournamentHandler.php',
                 {
                     method: 'POST',
                     headers: {
