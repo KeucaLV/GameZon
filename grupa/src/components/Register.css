@@ -1,21 +1,19 @@
-/* * {
+
+*{
   margin: 0;
   padding: 0;
 }
 body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-  background-color: #f1caff;
   font-family: "Inter";
-} */
+}
+
 .login {
   display: flex;
   flex-direction: row;
   height: 424px;
   max-width: 644px;
   width: 100%;
+  align-self: center;
 }
 .login-form {
   display: flex;
@@ -91,6 +89,8 @@ input:focus {
   color: #ffffff;
   box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.5);
   font-size: 15px;
+  margin-top:5px;
+  margin-bottom:10px;
 }
 .login-button:hover {
   background-color: #a153bd;
@@ -153,3 +153,8 @@ input.checkbox {
   outline: none;
   border: 1px solid #a7a7a7;
 }
+
+.error{
+  color:red;
+}
+
