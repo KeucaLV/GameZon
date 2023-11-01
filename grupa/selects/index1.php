@@ -7,7 +7,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 
 $obj = new TaskHandler;
-$sql = "SELECT * FROM `gamer`";
+$sql = "SELECT * FROM `add_tournament`";
 $result = $obj->select($sql);
 
 if ($result->num_rows > 0) {
