@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import Ww from "./ww.png";
 
@@ -28,7 +29,7 @@ function Login() {
           <div className="register-page">
             <div className="register-text">Create an account here</div>
             <div className="sign-up-text">
-              <a href="#">Sign up</a>
+              <Link to = "/Register">Sign up</Link>
             </div>
           </div>
           <div className="forgot-page">

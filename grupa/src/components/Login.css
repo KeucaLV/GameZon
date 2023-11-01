@@ -47,7 +47,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   /* margin-left:44px; */
-  height: 160px;
   width: 80%;
 }
 .user-label {
