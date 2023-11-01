@@ -14,21 +14,6 @@ class TaskAPI {
     }
 
     function getTaskById($id) {
-        $query = "SELECT * FROM games WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    function getAllTasks() {
-        $query = "SELECT * FROM games";
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    function getEventById($id) {
         $query = "SELECT * FROM add_tournament WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
@@ -36,7 +21,7 @@ class TaskAPI {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    function getAllEvent() {
+    function getAllTasks() {
         $query = "SELECT * FROM add_tournament";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
@@ -47,18 +32,11 @@ class TaskAPI {
 $api = new TaskAPI($db);
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['id']) && isset($_GET['type']) && $_GET['type'] === 'event') {
-        $task = $api->getEventById($_GET['id']);
-        echo json_encode($task);
-    } elseif (isset($_GET['id']) && isset($_GET['type']) && $_GET['type'] === 'task') {
+    if (isset($_GET['id'])) {
         $task = $api->getTaskById($_GET['id']);
         echo json_encode($task);
-    } elseif (isset($_GET['type']) && $_GET['type'] === 'event') {
-        $tasks = $api->getAllEvent();
-        echo json_encode($tasks);
     } else {
         $tasks = $api->getAllTasks();
         echo json_encode($tasks);
     }
 }
-?>

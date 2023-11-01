@@ -23,4 +23,22 @@ class TaskHandler extends Database{
         return $tasks;
     }
 
+    function getAllEvennts() {
+        $db = new Database;
+        $sql = "SELECT * FROM `add_tournaments`";
+        $result = $this->conn->query($sql);
+        $tasks = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $tasks[] = $row;
+            }
+        } else {
+            echo "empty";
+        }
+
+        return $tasks;
+    }
+
+
 }
