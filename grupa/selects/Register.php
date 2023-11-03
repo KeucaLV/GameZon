@@ -18,7 +18,6 @@ class DataHandler extends Database {
         $username = htmlspecialchars(trim($decodedData['username']));
         $password = htmlspecialchars(trim($decodedData['password']));
         $confPassword = $decodedData['confPassword'];
-
 //        $task_title = htmlspecialchars(trim($_POST["task_title"]));
 
         $data = [

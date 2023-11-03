@@ -1,15 +1,50 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
+import {isAuth} from "./isAuth";
 
 function Header() {
   const [isBoxOpen, setIsBoxOpen] = useState(false);
   const [isTitleVisible, setIsTitleVisible] = useState(true);
+  const[result, setResult] = useState(false);
+  useEffect(() => {
+  }, [result]);
 
   const toggleBox = () => {
     setIsBoxOpen(!isBoxOpen);
     setIsTitleVisible(!isTitleVisible);
   };
+
+  let token = localStorage.getItem('token')
+
+  useEffect( () => {
+    const isAuth = async (token) => {
+
+      let cleanData = { token };
+
+      let response = await fetch('http://localhost/gamezon/GameZon/grupa/selects/Auth.php', {
+        method: 'POST',
+        body: JSON.stringify(cleanData),
+        headers: {
+          "Content-Type": 'application/json',
+          "Accept": 'application/json'
+        }
+      });
+
+      response = await response.json();
+
+      if(response.status === 200) {
+        setResult(true);
+      }
+      if(response.status === 403) {
+        setResult(false);
+      }
+    }
+    isAuth(token);
+    console.log(result);
+  }, [result]);
+
+
 
   return (
     <>

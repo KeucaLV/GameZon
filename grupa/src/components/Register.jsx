@@ -27,7 +27,7 @@ function Register() {
         password,
         confPassword
       };
-      let response = await fetch('http://localhost/Datubazes/selects/loginHandler.php', {
+      let response = await fetch('http://localhost/gamezon/GameZon/grupa/selects/register.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

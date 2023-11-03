@@ -1,5 +1,5 @@
 <?php
-require('loginHandler.php');
+require('Register.php');
 
 $api = new DataHandler();
 

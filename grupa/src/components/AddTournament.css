@@ -83,11 +83,17 @@ input{
     height:35px;
     align-self: center;
     font-size:24px;
+    text-align: center;
 }
 button:hover{
     transition: 0.3s;
     background-color: #388dad;
     cursor:pointer;
     padding:5px;
+}
+.addTournamentButton{
+    width:100%;
+    display:flex;
+    justify-content:center;
 }
 

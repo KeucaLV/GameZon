@@ -53,7 +53,7 @@ function AddTournament() {
             }
 
             if (response.status === 200) {
-                navigate('/');
+                navigate('/Tournaments');
             }
         } catch (error) {
             console.error('An error occurred:', error);

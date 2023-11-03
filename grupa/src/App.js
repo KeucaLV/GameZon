@@ -4,11 +4,12 @@ import "./App.css";
 import Games from "./components/games.js";
 import Header from "./components/header.js";
 // import Search from "./components/search.js";
-import Login from "./components/Login.js";
+import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import AddTournament from "./components/AddTournament";
 import SearchTest from "./components/searchTest";
 import ForgotPassword from "./components/ForgotPassword";
+import Tournaments from "./components/Tournaments";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/AddTournament" element={<AddTournament />} />
           <Route exact path="/ForgotPassword" element={<ForgotPassword />} />
+          <Route exact path="/Tournaments" element={<Tournaments />} />
         </Routes>
       </BrowserRouter>{" "}
       {/* Changed this line */}
